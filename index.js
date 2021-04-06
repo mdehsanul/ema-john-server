@@ -12,9 +12,7 @@ app.get("/", (req, res) => {
 });
 
 const port = 4000;
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
+app.listen(process.env.PORT || port);
 
 // mongoDB
 const MongoClient = require("mongodb").MongoClient;
